@@ -47,15 +47,16 @@ Se solicita la creación de una API REST que gestione las alineaciones de los pa
 7. Las acciones son de un tipo (tarjeta amarilla o roja, gol/gol en propia puerta, asistencia). No es necesario incluir ninguna más.
 8. Las acciones ocurren en un minuto concreto del partido.
 9. Las acciones van asociadas a un jugador alineado.
-9. Omitimos la gestión se cambios de jugadores en la alineación.
+10. Omitimos la gestión de cambios de jugadores en la alineación.
 
 ### Funcionalidad
 1. Poder crear, editar y eliminar una alineación.
 2. Poder crear, editar y eliminar un jugador.
-3. Poder crear o eliminar una acción.
-4. Obtener una alineación, con la posibilidad de añadir los jugadores alineados y las acciones que se han producido.
-5. Listar los jugadores. Incluir filtro por posición. Paginación requerida.
-6. Listar el total de acciones por tipo. Incluir filtro por alineación o jugador.
+3. Añadir o eliminar un jugador a una alineación.
+4. Poder crear o eliminar una acción.
+5. Obtener una alineación, con la posibilidad de añadir los jugadores alineados y las acciones que se han producido.
+6. Listar los jugadores. Incluir filtro por posición. Paginación requerida.
+7. Listar el total de acciones por tipo. Incluir filtro por alineación o jugador.
 
 
 ### Requisitos
