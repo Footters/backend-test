@@ -2,8 +2,8 @@
 	<div>
 		<img width="200" src="media/logo.png" alt="Footters Core">
 	</div>
-    <h2 width="200">Footters - Backend Developer Test</h2>
-	<p>La siguiente es una prueba para evaluar a aspectos técnicos de los candidatos a desarrollador **Backend**.</p>
+    <h1 width="200">Footters - Backend Developer Test</h1>
+	<p>La siguiente es una prueba para evaluar a aspectos técnicos de los candidatos a desarrollador <b>Backend</b>.</p>
 	<p>
 		<sub>Made with :heart: by people who loves :soccer:</sub>
 	</p>
