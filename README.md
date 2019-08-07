@@ -1,5 +1,16 @@
-# Prueba Técnica - Backend Developer
-La siguiente es una prueba para evaluar a aspectos técnicos de los candidatos a desarrollador **Backend**.
+<div align="center">
+	<div>
+		<img width="200" src="media/logo.png" alt="Footters Core">
+	</div>
+    <h2 width="200">Footters - Backend Developer Test</h2>
+	<p>La siguiente es una prueba para evaluar a aspectos técnicos de los candidatos a desarrollador **Backend**.</p>
+	<p>
+		<sub>Made with :heart: by people who loves :soccer:</sub>
+	</p>
+	<br>
+</div>
+
+
 
 ## Introducción
 Este repositorio contiene una serie de requerimientos de un Caso Práctico, que busca evaluar las capacidades técnicas del candidato con respecto a las principales funciones y responsabilidades que se requieren dentro del área de Desarrollo de Tecnología de _Footters_.
