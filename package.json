@@ -1,0 +1,30 @@
+{
+  "name": "backend-test",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r \t<div>\r \t\t<img width=\"200\" src=\"media/logo.png\" alt=\"Footters Core\">\r \t</div>\r     <h1 width=\"200\">Footters - Backend Developer Test</h1>\r \t<p>La siguiente es una prueba para evaluar a aspectos técnicos de los candidatos a desarrollador <b>Backend</b>.</p>\r \t<p>\r \t\t<sub>Made with :heart: by people who loves :soccer:</sub>\r \t</p>\r \t<br>\r </div>",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js 8080",
+    "develop": "nodemon watch .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsegura/backend-test.git"
+  },
+  "author": "Roberto Segura",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "express": "4.17.1",
+    "sequelize": "^5.12.3",
+    "sqlite3": "^4.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "1.19.1"
+  },
+  "bugs": {
+    "url": "https://github.com/rsegura/backend-test/issues"
+  },
+  "homepage": "https://github.com/rsegura/backend-test#readme"
+}
