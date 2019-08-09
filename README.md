@@ -31,8 +31,8 @@ Principalmente los siguientes aspectos:
     * Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
 4. Se recomienda añadir un `archivo.md` en la solución aportada para explicar mediante texto lo que se considere oportuno.
 5. **Al finalizar**, existen 2 opciones para entregar su proyecto:
-    * 1) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su nombre**, y notificar a la siguiente dirección de correo electrónico  [tech@footters.com](mailto:tech@footters.com).
-    * 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [tech@footters.com](mailto:tech@footters.com).
+    * 1) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su nombre**, y notificar a la siguiente dirección de correo electrónico  [dlcarrascal@footters.com](mailto:dlcarrascal@footters.com).
+    * 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [dlcarrascal@footters.com](mailto:dlcarrascal@footters.com).
 
 ## Descripción
 Se solicita la creación de una API REST que gestione las alineaciones de los partidos de fútbol, los jugadores alineados en ellas y las acciones que generan estos jugadores durante un partido.
