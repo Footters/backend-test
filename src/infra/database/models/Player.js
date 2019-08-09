@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 module.exports = (sequelize) =>{
-	sequelize.define('player', {
+	console.log("estoy aquí");
+	const Player = sequelize.define('player', {
 		nickName: {
 			type:Sequelize.STRING,
 			allowNull:false
@@ -11,6 +12,12 @@ module.exports = (sequelize) =>{
 		},
 		position:{
 			type:Sequelize.STRING
+		},
+		teamId:{
+			type:Sequelize.STRING
 		}
+
 	});
+
+	return Player;
 };

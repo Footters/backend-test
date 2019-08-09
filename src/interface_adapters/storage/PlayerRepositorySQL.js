@@ -10,17 +10,21 @@ module.exports = class {
 
 	async getByNickName(nickName) {
  		const seqPlayer = await this.model.findOne({ where: { nickName: nickName } });		
+ 		if(seqPlayer === undefined || seqPlayer === null){
+ 			return null;
+ 		}
  		return new Player(seqPlayer.id, seqPlayer.nickName, seqPlayer.number, seqPlayer.position);
 	}
 
 	async create(playerEntity){
-		const {nickName, number, position} = playerEntity;
-		const seqPlayer = await this.model.create({nickName, number, position});
+		const {nickName, number, position, teamId} = playerEntity;
+		const seqPlayer = await this.model.create({nickName, number, position, teamId});
 		await seqPlayer.save();
- 		return new Player(seqPlayer.id, seqPlayer.nickName, seqPlayer.number, seqPlayer.position);
+ 		return new Player(seqPlayer.id, seqPlayer.nickName, seqPlayer.number, seqPlayer.position, seqPlayer.teamId);
 	}
 
 	async update(newData, name){
+		console.log(newData);
 		const seqPlayer = await this.model.update(newData, {where:{nickName:name}});
  		return null;
 	}
@@ -33,7 +37,7 @@ module.exports = class {
 	async find(limit, offset, filter){
 		const seqPlayer = await this.model.findAll({limit, offset, where:filter});
     	return seqPlayer.map((seqPlayer) => {
-      		return new Player(seqPlayer.id, seqPlayer.nickName, seqPlayer.number, seqPlayer.position);
+      		return new Player(seqPlayer.id, seqPlayer.nickName, seqPlayer.number, seqPlayer.position, seqPlayer.teamId);
     	});
 	}
 };

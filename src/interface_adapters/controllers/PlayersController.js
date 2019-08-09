@@ -5,7 +5,6 @@ const PlayerRepository = require(process.cwd()+'/src/app/repositories/PlayerRepo
 const PlayerRepositorySQL = require(process.cwd()+'/src/interface_adapters/storage/PlayerRepositorySQL');
 const playerRepository = new PlayerRepository(new PlayerRepositorySQL());
 
-
 const Player  = require(process.cwd()+'/src/app/player')(playerRepository);
 
 module.exports = {

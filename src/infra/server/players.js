@@ -12,11 +12,11 @@ module.exports = () =>{
 		next();
 	});
 
-	router.get('/player/:nickName', PlayersController.getPlayerByNickName())
-	router.delete('/player/:nickName', PlayersController.deletePlayer())
-	router.post('/player', PlayersController.createPlayer());
-	router.put('/player', PlayersController.editPlayer());
-	router.get('/players', PlayersController.getPlayers());
+	router.get('/:nickName', PlayersController.getPlayerByNickName())
+	router.delete('/:nickName', PlayersController.deletePlayer())
+	router.post('/', PlayersController.createPlayer());
+	router.put('/', PlayersController.editPlayer());
+	router.get('/', PlayersController.getPlayers());
 
 	return router;
 }
