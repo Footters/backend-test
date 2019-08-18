@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js 8080",
     "develop": "nodemon watch .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "sqlite3": "^4.0.9"
   },
   "devDependencies": {
+    "jest": "^24.9.0",
     "nodemon": "1.19.1"
   },
   "bugs": {
