@@ -3,6 +3,10 @@
 const { Router } = require('express');
 const router = new Router();
 const PlayersController = require(process.cwd()+'/src/interface_adapters/controllers/PlayersController');
+const CacheRedis = require(process.cwd()+'/src/interface_adapters/cache/cacheRepositoryRedis');
+
+const cacheRedis = new CacheRedis();
+const cache = require(process.cwd()+'/src/interface_adapters/cache/cacheMiddleware.js');
 
 
 
@@ -12,11 +16,11 @@ module.exports = () =>{
 		next();
 	});
 
-	router.get('/:nickName', PlayersController.getPlayerByNickName())
+	router.get('/:nickName',cache("api:players",cacheRedis), PlayersController.getPlayerByNickName())
 	router.delete('/:nickName', PlayersController.deletePlayer())
 	router.post('/', PlayersController.createPlayer());
 	router.put('/', PlayersController.editPlayer());
-	router.get('/', PlayersController.getPlayers());
+	router.get('/',cache("api:players",cacheRedis), PlayersController.getPlayers(cacheRedis));
 
 	return router;
 }

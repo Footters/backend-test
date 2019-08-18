@@ -6,7 +6,8 @@ const PlayerRepositorySQL = require(process.cwd()+'/src/interface_adapters/stora
 const playerRepository = new PlayerRepository(new PlayerRepositorySQL());
 
 const Player  = require(process.cwd()+'/src/app/player')(playerRepository);
-
+const PATH_PATTERN = "api:players"
+const CACHE_TTL = 20
 module.exports = {
 
 	getPlayerByNickName(){
@@ -72,7 +73,7 @@ module.exports = {
 		}
 	},
 
-	getPlayers(){
+	getPlayers(cache){
 		return async(req, res, next) =>{
 			try{
 				const page = req.query.page || 0;
@@ -81,6 +82,7 @@ module.exports = {
 				const offset = page * pageSize;
 				const limit = offset + pageSize;
 				const players = await Player.GetPlayers(limit, offset, position);
+				cache.set(PATH_PATTERN+":"+req.originalUrl, CACHE_TTL, PATH_PATTERN, players)
 				return res.status(200).send(players);
 			}
 			catch(e){
