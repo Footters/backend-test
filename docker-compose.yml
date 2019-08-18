@@ -1,0 +1,8 @@
+version : '1'
+services: 
+  redis-server:
+    image: 'redis'
+  backend-test:
+    build: .
+    ports:
+      - "8080:8080"
