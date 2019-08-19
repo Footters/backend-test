@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
 
 const players = require('./players');
 const lineups = require('./lineups');
@@ -10,6 +11,7 @@ const expressServer = function(config){
 	this.config = config || {};
 
 	this.expressServer = express();
+	this.expressServer.use(helmet());
 	this.expressServer.use(bodyParser.json());
 	this.expressServer.use(bodyParser.urlencoded({extended:true}));
 	this.expressServer.use('/api/players', players());
