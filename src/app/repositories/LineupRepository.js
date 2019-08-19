@@ -7,7 +7,6 @@ module.exports = class{
 	}
 
 	create(lineupEntity){
-		console.log("redirect");
 		return this.repository.create(lineupEntity);
 	}
 
